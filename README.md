@@ -17,7 +17,7 @@ To run the Cypress tests:
 Writing Tests
 
 Tests should be written in TypeScript and stored in the cypress/e2e folder. You can run a test 
-by running npx cypress run --spec "cypress/integration/filename.spec.ts".
+by running npx cypress run --spec "cypress/e2e/projectFolder/filename.cy.ts".
 
 Configuration
 
