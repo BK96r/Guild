@@ -13,12 +13,11 @@ To run the Cypress tests:
 
  Open Cypress with the following command: "npx cypress open"
  Run Cypress with the following command: "npx cypress run"
- Click on a test file to run the tests.
 
 Writing Tests
 
-Tests should be written in TypeScript and stored in the cypress/integration folder. You can run a test by clicking
-on the file in the Cypress UI or by running npx cypress run --spec "cypress/integration/filename.spec.ts".
+Tests should be written in TypeScript and stored in the cypress/e2e folder. You can run a test 
+by running npx cypress run --spec "cypress/integration/filename.spec.ts".
 
 Configuration
 
