@@ -4,15 +4,15 @@ Structured for using Cypress with TypeScript
 
 Before starting, make sure you have Node.js and npm installed.
 
- Clone this repository: git clone https://github.com/BK96r/Project-Test-For-Guild.git
- Navigate to the project folder: "cd Guild"
- Install the dependencies: "npm install"
+Clone this repository: git clone https://github.com/BK96r/Project-Test-For-Guild.git
+Navigate to the project folder: "cd Guild"
+Install the dependencies: "npm install"
 
 Running Tests
 To run the Cypress tests:
 
- Open Cypress with the following command: "npx cypress open"
- Run Cypress with the following command: "npx cypress run"
+Open Cypress with the following command: "npx cypress open"
+Run Cypress with the following command: "npx cypress run"
 
 Writing Tests
 

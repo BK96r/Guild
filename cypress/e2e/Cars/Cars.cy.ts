@@ -14,11 +14,18 @@ describe('Cars.com check order of listed prices', () => {
      it('should check prices by highest price', () => {
         cy.get("#sort-dropdown").select('list_price_desc')
         cy.wait(2000)
+        cy.scrollTo("bottom");
         cy.get('.primary-price').then(prices => {
-            for (let i = 1; i <= 10 ; i++) {
+            for (let i = 1; i < prices.length - 1 ; i++) {
+              
               const currentPrice = Number(prices[i].textContent.replace(/[^0-9.-]+/g,""));
               const nextPrice = Number(prices[i + 1].textContent.replace(/[^0-9.-]+/g,""));
-              expect(currentPrice).to.be.greaterThan(nextPrice);
+              if (currentPrice == nextPrice){
+                continue
+              }else{
+                expect(currentPrice).to.be.greaterThan(nextPrice);
+              }
+              
             }
           });
       });
@@ -27,12 +34,17 @@ describe('Cars.com check order of listed prices', () => {
       it('should check prices by lowest price', () => {
         cy.get("#sort-dropdown").select('list_price')
         cy.wait(2000)
+        cy.scrollTo("bottom");
         cy.get('.primary-price').then(prices => {
-            for (let i = 1; i <= 5 ; i++) {
+            for (let i = 1; i < prices.length - 1 ; i++) {
               const currentPrice = Number(prices[i].textContent.replace(/[^0-9.-]+/g,""));
               const nextPrice = Number(prices[i + 1].textContent.replace(/[^0-9.-]+/g,""));
+              if(currentPrice == nextPrice){
+                continue
+            }else {
               expect(currentPrice).to.be.lessThan(nextPrice);
-            }
-          });
+          }
+        }
       });
-  })
+  });
+})
